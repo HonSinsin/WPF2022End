@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="P1" Height="450" Width="800">
     <Window.Resources>
-        <Style TargetType="Border">
+        <!-- 样式不设置 key 值 会应用窗口中所有该类型的控件 -->
+        <Style TargetType="Border" x:Key="borderStyle">
             <Setter Property="Margin" Value="3"/>
         </Style>
 
@@ -52,7 +53,7 @@
             <Border Grid.Row="2" Background="Black"/>
             <Border Grid.Row="2" Grid.Column="1" Background="Bisque"/>
 
-            <Border Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="2" Background="CadetBlue"/>
+            <Border Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="2" Background="CadetBlue" Style="{StaticResource borderStyle}"/>
 
             <Border Grid.Row="3" Background="BlanchedAlmond" />
             <Border Grid.Row="3" Grid.Column="1" Background="Blue"/>
