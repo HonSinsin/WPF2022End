@@ -58,6 +58,9 @@
     <Compile Include="Views\P1.xaml.cs">
       <DependentUpon>P1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\P3ControlTemplate.xaml.cs">
+      <DependentUpon>P3ControlTemplate.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,6 +74,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\P1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\P3ControlTemplate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
