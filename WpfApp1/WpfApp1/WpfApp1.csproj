@@ -55,6 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\MyCommand.cs" />
+    <Compile Include="ViewModel\P7CommandViewModel.cs" />
     <Compile Include="Views\P1.xaml.cs">
       <DependentUpon>P1.xaml</DependentUpon>
     </Compile>
@@ -66,6 +68,9 @@
     </Compile>
     <Compile Include="Views\P5_6Binding.xaml.cs">
       <DependentUpon>P5_6Binding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\P7Command.xaml.cs">
+      <DependentUpon>P7Command.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -92,6 +97,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\P5_6Binding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\P7Command.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
