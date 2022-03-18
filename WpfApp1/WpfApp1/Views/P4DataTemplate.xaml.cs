@@ -41,6 +41,7 @@ namespace WpfApp1.Views
             colors.Add(new Color() { Code = "pink", Name = "粉色" });
             list.ItemsSource = colors;
             grid.ItemsSource = colors;
+            ooo.ItemsSource = colors;
         }
     }
 

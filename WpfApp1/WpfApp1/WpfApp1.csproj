@@ -64,6 +64,9 @@
     <Compile Include="Views\P4DataTemplate.xaml.cs">
       <DependentUpon>P4DataTemplate.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\P5_6Binding.xaml.cs">
+      <DependentUpon>P5_6Binding.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -85,6 +88,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\P4DataTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\P5_6Binding.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

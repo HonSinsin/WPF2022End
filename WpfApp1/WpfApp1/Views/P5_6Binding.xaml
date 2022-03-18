@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfApp1.Views.P5_6Binding"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Views"
+        mc:Ignorable="d"
+        Title="P5_6Binding" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel>
+                <Slider x:Name="slider" />
+                <!-- 仅绑定一次 -->
+                <TextBox Margin="5" Height="30" Text="{Binding ElementName=slider,Path=Value,Mode=OneTime}"/>
+                <!-- 被动设置文本值 -->
+                <TextBox Margin="5" Height="30" Text="{Binding ElementName=slider,Path=Value,Mode=OneWay}"/>
+                <!-- 设置绑定元素的值, 被绑定的元素变动不会影响到 -->
+                <TextBox Margin="5" Height="30" Text="{Binding ElementName=slider,Path=Value,Mode=OneWayToSource}"/>
+                <!-- 双向绑定数据 -->
+                <TextBox Margin="5" Height="30" Text="{Binding ElementName=slider,Path=Value,Mode=TwoWay}"/>
+            </StackPanel>
+            <StackPanel Margin="0 30 0 0">
+                <TextBox Margin="10" Height="30" Text="{Binding Name}"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
