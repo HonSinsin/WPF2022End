@@ -9,6 +9,7 @@
     <Grid>
         <StackPanel>
             <TextBox Text="{Binding Name}" Height="20" Margin="5"/>
+            <TextBox Text="{Binding Title}" Height="20" Margin="5"/>
             <Button Content="Show" Command="{Binding ShowCommand}" Margin="5"/>
         </StackPanel>
     </Grid>
