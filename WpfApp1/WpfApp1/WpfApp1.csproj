@@ -64,6 +64,9 @@
     <Compile Include="Views\P12Resource.xaml.cs">
       <DependentUpon>P12Resource.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\P13Animation.xaml.cs">
+      <DependentUpon>P13Animation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\P3ControlTemplate.xaml.cs">
       <DependentUpon>P3ControlTemplate.xaml</DependentUpon>
     </Compile>
@@ -97,6 +100,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\P12Resource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\P13Animation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
