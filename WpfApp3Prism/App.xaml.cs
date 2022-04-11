@@ -7,6 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using WpfApp3Prism.View;
 
 namespace WpfApp3Prism
 {
@@ -17,7 +18,7 @@ namespace WpfApp3Prism
     {
         protected override Window CreateShell()
         {
-            return Container.Resolve<MainWindow>();
+            return Container.Resolve<MainView>();
             //throw new NotImplementedException();
         }
 

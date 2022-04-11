@@ -1,0 +1,48 @@
+﻿<Window
+    x:Class="WpfApp3Prism.View.MainView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfApp3Prism"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:prism="http://prismlibrary.com/"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Grid>
+        <!--<TextBlock FontSize="40" Text="Hello! Prism" />-->
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Button
+                Width="100"
+                Height="30"
+                Margin="5"
+                Command="{Binding OpenCommand}"
+                CommandParameter="ViewA"
+                Content="ViewA" />
+            <Button
+                Width="100"
+                Height="30"
+                Margin="5"
+                Command="{Binding OpenCommand}"
+                CommandParameter="ViewB"
+                Content="ViewB" />
+            <Button
+                Width="100"
+                Height="30"
+                Margin="5"
+                Command="{Binding OpenCommand}"
+                CommandParameter="ViewC"
+                Content="ViewC" />
+        </StackPanel>
+
+        <ContentControl Grid.Row="1" Content="{Binding Body}" />
+
+    </Grid>
+</Window>
