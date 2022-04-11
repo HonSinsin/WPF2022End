@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Prism
+namespace WpfApp3Prism
 {
     /// <summary>
     /// Interaction logic for App.xaml
@@ -17,10 +17,10 @@ namespace Prism
     {
         protected override Window CreateShell()
         {
-            //throw new NotImplementedException();
             return Container.Resolve<MainWindow>();
+            //throw new NotImplementedException();
         }
-          
+
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             //throw new NotImplementedException();
