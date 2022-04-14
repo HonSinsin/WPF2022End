@@ -7,7 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
-using WpfApp3Prism.View;
+using WpfApp3Prism.Views;
 
 namespace WpfApp3Prism
 {
@@ -24,7 +24,9 @@ namespace WpfApp3Prism
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            //throw new NotImplementedException();
+            containerRegistry.RegisterForNavigation<ViewA>();
+            containerRegistry.RegisterForNavigation<ViewB>();
+            containerRegistry.RegisterForNavigation<ViewC>();
         }
     }
 }

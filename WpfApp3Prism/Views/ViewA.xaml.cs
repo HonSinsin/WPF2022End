@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp3Prism.View
+namespace WpfApp3Prism.Views
 {
     /// <summary>
     /// ViewA.xaml 的交互逻辑

@@ -13,16 +13,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp3Prism.View
+namespace WpfApp3Prism.Views
 {
     /// <summary>
-    /// ViewC.xaml 的交互逻辑
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class ViewC : UserControl
+    public partial class MainView : Window
     {
-        public ViewC()
+        public MainView()
         {
             InitializeComponent();
+            //this.DataContext = new ViewModel.MainViewModel();
         }
     }
 }
