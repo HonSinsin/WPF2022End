@@ -1,5 +1,8 @@
-﻿using Prism.DryIoc;
+﻿//using ModuleA;
+//using ModuleB;
+using Prism.DryIoc;
 using Prism.Ioc;
+using Prism.Modularity;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -24,9 +27,21 @@ namespace WpfApp3Prism
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<ViewA>();
-            containerRegistry.RegisterForNavigation<ViewB>();
-            containerRegistry.RegisterForNavigation<ViewC>();
+            //containerRegistry.RegisterForNavigation<ViewA>();
+            //containerRegistry.RegisterForNavigation<ViewB>();
+            //containerRegistry.RegisterForNavigation<ViewC>();
+        }
+
+        //protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
+        //{
+        //    moduleCatalog.AddModule<ModuleAProfile>();
+        //    moduleCatalog.AddModule<ModuleBProfile>();
+        //    base.ConfigureModuleCatalog(moduleCatalog);
+        //}
+
+        protected override IModuleCatalog CreateModuleCatalog()
+        {
+            return new DirectoryModuleCatalog() { ModulePath = @".\Modules"};
         }
     }
 }
