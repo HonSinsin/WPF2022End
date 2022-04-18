@@ -13,9 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyToDo", "MyToDo\MyToDo.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp3Prism", "WpfApp3Prism\WpfApp3Prism.csproj", "{C6CF9AD1-C8FF-4C6C-9F1E-E6FF73994B48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleA", "ModleA\ModuleA.csproj", "{CC61EBEB-DF1E-40A1-AA62-E34633ED7EB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModleA", "ModleA\ModleA.csproj", "{CC61EBEB-DF1E-40A1-AA62-E34633ED7EB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleB", "ModuleB\ModuleB.csproj", "{9584606E-8DF7-4D6B-8089-22FEB614DE33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModleB", "ModleB\ModleB.csproj", "{9584606E-8DF7-4D6B-8089-22FEB614DE33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

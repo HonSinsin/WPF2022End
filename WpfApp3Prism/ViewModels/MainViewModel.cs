@@ -25,7 +25,9 @@ namespace WpfApp3Prism.ViewModels
 
         private void Open(string obj)
         {
-            regionManager.Regions["ContentRegion"].RequestNavigate(obj);
+            NavigationParameters keys = new NavigationParameters();
+            keys.Add("Title", "Hello!");
+            regionManager.Regions["ContentRegion"].RequestNavigate(obj, keys);
         }
     }
 }

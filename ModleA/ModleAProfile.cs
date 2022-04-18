@@ -1,4 +1,5 @@
-﻿using ModuleA.Views;
+﻿using ModleA.ViewModels;
+using ModleA.Views;
 using Prism.Ioc;
 using Prism.Modularity;
 using System;
@@ -7,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ModuleA
+namespace ModleA
 {
-    public class ModuleAProfile : IModule
+    public class ModleAProfile : IModule
     {
         public void OnInitialized(IContainerProvider containerProvider)
         {
@@ -17,7 +18,8 @@ namespace ModuleA
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<ViewA>();
+            // 一般的在代码中设置匹配项, 不在xaml中设置自动匹配
+            containerRegistry.RegisterForNavigation<ViewA, ViewAViewModel>();
         }
     }
 }
