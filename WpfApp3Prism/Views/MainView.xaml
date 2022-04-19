@@ -25,22 +25,12 @@
                 Height="30"
                 Margin="5"
                 Command="{Binding OpenCommand}"
-                CommandParameter="ViewA"
-                Content="ViewA" />
-            <Button
-                Width="100"
-                Height="30"
-                Margin="5"
-                Command="{Binding OpenCommand}"
-                CommandParameter="ViewB"
-                Content="ViewB" />
-            <Button
-                Width="100"
-                Height="30"
-                Margin="5"
-                Command="{Binding OpenCommand}"
                 CommandParameter="ViewC"
-                Content="ViewC" />
+                Content="弹窗 ViewC" />
+            <TextBlock
+                Margin="10,0"
+                FontSize="30"
+                Text="{Binding Title}" />
         </StackPanel>
 
         <ContentControl Grid.Row="1" prism:RegionManager.RegionName="ContentRegion" />

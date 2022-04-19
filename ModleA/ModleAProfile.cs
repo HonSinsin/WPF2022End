@@ -18,6 +18,7 @@ namespace ModleA
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterDialog<ViewC, ViewCViewModel>();
             // 一般的在代码中设置匹配项, 不在xaml中设置自动匹配
             containerRegistry.RegisterForNavigation<ViewA, ViewAViewModel>();
         }

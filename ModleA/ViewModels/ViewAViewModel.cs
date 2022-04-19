@@ -10,7 +10,7 @@ namespace ModleA.ViewModels
 {
     public class ViewAViewModel : BindableBase, INavigationAware
     {
-        private string title;
+        private string title = string.Empty;
 
         public ViewAViewModel()
         {
