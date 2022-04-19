@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ModleA.Event;
+using Prism.Events;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,19 @@ namespace ModleA.Views
     /// </summary>
     public partial class ViewC : UserControl
     {
-        public ViewC()
+        private readonly IEventAggregator aggregator;
+
+        public ViewC(IEventAggregator aggregator)
         {
             InitializeComponent();
+            this.aggregator = aggregator;
+            aggregator.GetEvent<MessageEvent>().Subscribe(SubMessage);
+        }
+
+        private void SubMessage(string obj)
+        {
+            MessageBox.Show($"接收到消息: {obj}");
+            aggregator.GetEvent<MessageEvent>().Unsubscribe(SubMessage);
         }
     }
 }

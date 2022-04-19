@@ -1,4 +1,6 @@
-﻿using Prism.Commands;
+﻿using ModleA.Event;
+using Prism.Commands;
+using Prism.Events;
 using Prism.Services.Dialogs;
 using System;
 using System.Collections.Generic;
@@ -12,16 +14,28 @@ namespace ModleA.ViewModels
     {
         public string Title { get; set; } = string.Empty;
         public IDialogService DialogService;
+        private readonly IEventAggregator aggregator;
 
         public event Action<IDialogResult> RequestClose;
 
         public DelegateCommand CancelCommand{get; set;}
         public DelegateCommand SaveCommand { get; set;}
 
-        public ViewCViewModel(IDialogService dialogService) {
+        //public ViewCViewModel(IDialogService dialogService)
+        //{
+        //    SetCommand();
+        //    DialogService = dialogService;
+        //}
+
+        public ViewCViewModel(IEventAggregator aggregator)
+        {
+            SetCommand();
+            this.aggregator = aggregator;
+        }
+
+        void SetCommand() {
             CancelCommand = new DelegateCommand(Cancel);
             SaveCommand = new DelegateCommand(Save);
-            DialogService = dialogService;
         }
 
         public void Save()
@@ -31,9 +45,12 @@ namespace ModleA.ViewModels
 
         public void Cancel()
         {
-            DialogParameters keys = new DialogParameters();
-            keys.Add("Value", "Return Cancel Value");
-            RequestClose?.Invoke(new DialogResult(ButtonResult.No, keys));
+            // 向 Message 发布一个 Hello
+            aggregator?.GetEvent<MessageEvent>().Publish("Hello");
+
+            //DialogParameters keys = new DialogParameters();
+            //keys.Add("Value", "Return Cancel Value");
+            //RequestClose?.Invoke(new DialogResult(ButtonResult.No, keys));
         }
 
         public bool CanCloseDialog()
