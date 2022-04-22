@@ -8,6 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\user.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\user.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MaterialDesignThemes" Version="4.4.0" />
     <PackageReference Include="Prism.DryIoc" Version="8.1.97" />
   </ItemGroup>

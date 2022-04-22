@@ -23,6 +23,25 @@ namespace WPFTodo
         public MainWindow()
         {
             InitializeComponent();
+            this.btnMin.Click += (s, e) => this.WindowState = WindowState.Minimized;
+            this.btnMax.Click += (s, e) => ShowWindowState();
+            this.btnClose.Click += (s, e) => this.Close();
+
+            ColorZone.MouseMove += (s, e) =>
+            {
+                if (e.LeftButton == MouseButtonState.Pressed)
+                    this.DragMove();
+            };
+
+            ColorZone.MouseDoubleClick += (s, e) => ShowWindowState();
+        }
+
+        void ShowWindowState()
+        {
+            if (WindowState == WindowState.Maximized)
+                this.WindowState = WindowState.Normal;
+            else
+                this.WindowState = WindowState.Maximized;
         }
     }
 }
