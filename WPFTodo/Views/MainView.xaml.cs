@@ -10,18 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WPFTodo
+namespace WPFTodo.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// MainView.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainView : Window
     {
-        public MainWindow()
+        public MainView()
         {
+            InitializeComponent();
             InitializeComponent();
             this.btnMin.Click += (s, e) => this.WindowState = WindowState.Minimized;
             this.btnMax.Click += (s, e) => ShowWindowState();
