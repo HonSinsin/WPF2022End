@@ -34,6 +34,10 @@ namespace WPFTodo.Views
             };
 
             ColorZone.MouseDoubleClick += (s, e) => ShowWindowState();
+
+            menuBar.SelectionChanged += (s, e)=>{
+                drawerHost.IsLeftDrawerOpen = false;
+            };
         }
 
         void ShowWindowState()
@@ -43,5 +47,6 @@ namespace WPFTodo.Views
             else
                 this.WindowState = WindowState.Maximized;
         }
+
     }
 }
