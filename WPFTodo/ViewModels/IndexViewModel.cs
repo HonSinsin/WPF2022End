@@ -17,6 +17,8 @@ namespace WPFTodo.ViewModels
         {
             taskBarList = new ObservableCollection<TaskBar>();
             CreateTaskBars();
+            CreateToDoDto();
+            CreateMemoDto();
         }
 
         public ObservableCollection<TaskBar> TaskBarList
@@ -25,6 +27,36 @@ namespace WPFTodo.ViewModels
             set { taskBarList = value; RaisePropertyChanged(); }
         }
 
+        ObservableCollection<ToDoDto> toDoDtoList = new();
+        public ObservableCollection<ToDoDto> ToDoDtoList
+        {
+            get { return toDoDtoList; }
+            set { toDoDtoList = value; RaisePropertyChanged(); }
+        }
+
+        ObservableCollection<MemoDto> memoDtoList = new();
+        public ObservableCollection<MemoDto> MemoDtoList
+        {
+            get { return memoDtoList; }
+            set { memoDtoList = value; RaisePropertyChanged(); }
+        }
+
+        void CreateToDoDto()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                toDoDtoList.Add(new ToDoDto() { Content = $"待办事项内容{i}", CreateTime = new DateTime(), Id = i, State = 0, Title = $"待办事项标题{i}", UpdateTime = new DateTime() });
+            }
+        }
+
+
+        void CreateMemoDto()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                memoDtoList.Add(new MemoDto() { Content = $"备忘录内容{i}", CreateTime = new DateTime(), Id = i, State = 0, Title = $"备忘录标题{i}", UpdateTime = new DateTime() });
+            }
+        }
         void CreateTaskBars()
         {
             taskBarList.Add(new TaskBar() { Icon = "WebClock", Title = "汇总", Context = "9", Color = "#FF0CA0FF", Target = "", });
