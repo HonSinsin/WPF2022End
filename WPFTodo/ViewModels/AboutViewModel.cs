@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace WPFTodo.ViewModels
 {
-    public class SettingViewModel
+    public class AboutViewModel
     {
+        public AboutViewModel()
+        {
+
+        }
     }
 }
