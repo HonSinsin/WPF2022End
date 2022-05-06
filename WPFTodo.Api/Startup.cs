@@ -1,3 +1,4 @@
+using Arch.EntityFrameworkCore.UnitOfWork;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +12,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WPFTodo.Api.Context;
+using WPFTodo.Api.Context.Repository;
 
 namespace WPFTodo.Api
 {
@@ -29,7 +32,11 @@ namespace WPFTodo.Api
             services.AddDbContext<WPFTodo.Api.Context.WPFToDoContext>(option => {
                 var connectionStr = Configuration.GetConnectionString("ToDoConnection");
                 option.UseSqlite(connectionStr);
-            });
+            }).AddUnitOfWork<WPFToDoContext>()
+            .AddCustomRepository<ToDo,ToDoRepository>()
+            .AddCustomRepository<Memo,MemoRepository>()
+            .AddCustomRepository<User,UserRepository>();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
