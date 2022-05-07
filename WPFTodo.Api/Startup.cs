@@ -14,6 +14,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WPFTodo.Api.Context;
 using WPFTodo.Api.Context.Repository;
+using WPFTodo.Api.Serivce;
 
 namespace WPFTodo.Api
 {
@@ -29,13 +30,16 @@ namespace WPFTodo.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<WPFTodo.Api.Context.WPFToDoContext>(option => {
+            services.AddDbContext<WPFTodo.Api.Context.WPFToDoContext>(option =>
+            {
                 var connectionStr = Configuration.GetConnectionString("ToDoConnection");
                 option.UseSqlite(connectionStr);
             }).AddUnitOfWork<WPFToDoContext>()
-            .AddCustomRepository<ToDo,ToDoRepository>()
-            .AddCustomRepository<Memo,MemoRepository>()
-            .AddCustomRepository<User,UserRepository>();
+            .AddCustomRepository<ToDo, ToDoRepository>()
+            .AddCustomRepository<Memo, MemoRepository>()
+            .AddCustomRepository<User, UserRepository>();
+
+            services.AddTransient<IToDoService, ToDoService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
