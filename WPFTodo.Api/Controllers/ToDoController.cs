@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WPFTodo.Api.Context;
 using WPFTodo.Api.Serivce;
+using WPFToDo.Shared.Dtos;
 
 namespace WPFTodo.Api.Controllers
 {
@@ -29,10 +30,10 @@ namespace WPFTodo.Api.Controllers
         public async Task<ApiResponse> GetAll() => await serivce.GetAllAsync();
 
         [HttpPost]
-        public async Task<ApiResponse> Add([FromBody] ToDo model) => await serivce.AddAsync(model);
+        public async Task<ApiResponse> Add([FromBody] ToDoDto model) => await serivce.AddAsync(model);
 
         [HttpPost]
-        public async Task<ApiResponse> Update([FromBody] ToDo model) => await serivce.UpdateAsync(model);
+        public async Task<ApiResponse> Update([FromBody] ToDoDto model) => await serivce.UpdateAsync(model);
 
         [HttpDelete]
         public async Task<ApiResponse> Delete(int id) => await serivce.DeleteAsync(id);

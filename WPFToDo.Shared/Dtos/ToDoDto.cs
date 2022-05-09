@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace WPFToDo.Shared.Dtos
 {
-    internal class ToDoDto : BaseDto
+    public class ToDoDto : BaseDto
     {
-        public string Title { get; set; }
+        private string title;
+        private string context;
 
-        public string Context { get; set; }
+        public string Title { get => title; set { title = value; OnPropertyChanged(); } }
+
+        public string Context { get => context; set { context = value; OnPropertyChanged(); } }
     }
 }

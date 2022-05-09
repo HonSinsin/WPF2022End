@@ -1,4 +1,5 @@
 using Arch.EntityFrameworkCore.UnitOfWork;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -14,6 +15,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WPFTodo.Api.Context;
 using WPFTodo.Api.Context.Repository;
+using WPFTodo.Api.Extensions;
 using WPFTodo.Api.Serivce;
 
 namespace WPFTodo.Api
@@ -40,6 +42,13 @@ namespace WPFTodo.Api
             .AddCustomRepository<User, UserRepository>();
 
             services.AddTransient<IToDoService, ToDoService>();
+
+            var automapper = new MapperConfiguration(config =>
+            {
+                config.AddProfile(new AutoMapperProFile());
+            });
+
+            services.AddSingleton(automapper.CreateMapper());
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

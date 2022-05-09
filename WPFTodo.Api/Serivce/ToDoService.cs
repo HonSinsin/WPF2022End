@@ -1,7 +1,9 @@
 ﻿using Arch.EntityFrameworkCore.UnitOfWork;
+using AutoMapper;
 using System;
 using System.Threading.Tasks;
 using WPFTodo.Api.Context;
+using WPFToDo.Shared.Dtos;
 
 namespace WPFTodo.Api.Serivce
 {
@@ -11,17 +13,20 @@ namespace WPFTodo.Api.Serivce
     public class ToDoService : IToDoService
     {
         private readonly IUnitOfWork work;
+        private readonly IMapper mapper;
 
-        public ToDoService(IUnitOfWork unitOfWork)
+        public ToDoService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             this.work = unitOfWork;
+            this.mapper = mapper;
         }
 
-        public async Task<ApiResponse> AddAsync(ToDo model)
+        public async Task<ApiResponse> AddAsync(ToDoDto model)
         {
             try
             {
-                await work.GetRepository<ToDo>().InsertAsync(model);
+                var todo = mapper.Map<ToDo>(model);
+                await work.GetRepository<ToDo>().InsertAsync(todo);
                 if (await work.SaveChangesAsync() > 0)
                     return new ApiResponse(true, model);
                 return new ApiResponse("数据添加失败");
@@ -85,17 +90,18 @@ namespace WPFTodo.Api.Serivce
             }
         }
 
-        public async Task<ApiResponse> UpdateAsync(ToDo model)
+        public async Task<ApiResponse> UpdateAsync(ToDoDto model)
         {
             try
             {
+                var dbtood = mapper.Map<ToDo>(model);
                 var repository = work.GetRepository<ToDo>();
-                var todo = await repository.GetFirstOrDefaultAsync(predicate: x => x.Id.Equals(model.Id));
+                var todo = await repository.GetFirstOrDefaultAsync(predicate: x => x.Id.Equals(dbtood.Id));
 
-                todo.Title = model.Title;
-                todo.Context = model.Context;
+                todo.Title = dbtood.Title;
+                todo.Context = dbtood.Context;
                 todo.UpdateTime = DateTime.Now;
-                //todo.Status = model.Status;
+                //todo.Status = dbtood.Status;
 
                 repository.Update(todo);
 
