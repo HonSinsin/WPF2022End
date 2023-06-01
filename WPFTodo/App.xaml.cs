@@ -19,7 +19,7 @@ namespace WPFTodo
     {
         protected override Window CreateShell()
         {
-            return Container.Resolve<MainView>();
+            return Container.Resolve<Window1>();
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)

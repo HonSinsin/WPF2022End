@@ -1,0 +1,44 @@
+﻿<Window
+    x:Class="WPFTodo.Views.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WPFTodo.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Window1"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+
+    <Grid>
+        <StackPanel>
+            <Button Width="100" Height="40">
+                <Button.Template>
+                    <ControlTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock
+                                Width="40"
+                                Background="Red"
+                                Text="{Binding N1ame}" />
+                            <Button
+                                Width="Auto"
+                                Background="Blue"
+                                Content="{Binding Code}" />
+                        </StackPanel>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock
+                Width="40"
+                Height="30"
+                Background="Red"
+                Text="{Binding N1ame}" />
+            <Button
+                Width="Auto"
+                Background="Blue"
+                Content="{Binding Code}" />
+        </StackPanel>
+    </Grid>
+</Window>
