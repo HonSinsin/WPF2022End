@@ -23,8 +23,10 @@ namespace LeetCode
             Console.WriteLine("Hello World!");
             //Console.WriteLine(new LeetCode7().Reverse(12345));          // 整数反转
             //Console.WriteLine(new LeetCode13().RomanToInt("MCMXCIV"));  // 罗马数字转整数
-            //Console.WriteLine(new LeetCode14().GetString(new string[] { "MCMXCIV" }));  // 最长公共前缀
+            Console.WriteLine(new LeetCode14().GetString(new string[] { "MCMXCIV" }));  // 最长公共前缀
+            Console.ReadKey();
 
+            return;
             // 使用匿名方法创建委托实例
             NumberChanger nc = delegate (int x)
             {
@@ -42,7 +44,6 @@ namespace LeetCode
             nc(2);
 
             string[] s = { "", "" };
-            Console.ReadKey();
         }
     }
 }
