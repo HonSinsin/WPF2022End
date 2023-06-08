@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFToDo.Shared", "WPFToDo.S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCode", "LeetCode\LeetCode.csproj", "{E0592D9D-3EEE-4A57-9EE6-AEE7B64F7C5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignMode", "DesignMode\DesignMode.csproj", "{FE870D6C-812E-4003-8295-8864AFDC74A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -167,6 +169,18 @@ Global
 		{E0592D9D-3EEE-4A57-9EE6-AEE7B64F7C5E}.Release|x64.Build.0 = Release|Any CPU
 		{E0592D9D-3EEE-4A57-9EE6-AEE7B64F7C5E}.Release|x86.ActiveCfg = Release|Any CPU
 		{E0592D9D-3EEE-4A57-9EE6-AEE7B64F7C5E}.Release|x86.Build.0 = Release|Any CPU
+		{FE870D6C-812E-4003-8295-8864AFDC74A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE870D6C-812E-4003-8295-8864AFDC74A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE870D6C-812E-4003-8295-8864AFDC74A7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FE870D6C-812E-4003-8295-8864AFDC74A7}.Debug|x64.Build.0 = Debug|Any CPU
+		{FE870D6C-812E-4003-8295-8864AFDC74A7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FE870D6C-812E-4003-8295-8864AFDC74A7}.Debug|x86.Build.0 = Debug|Any CPU
+		{FE870D6C-812E-4003-8295-8864AFDC74A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE870D6C-812E-4003-8295-8864AFDC74A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE870D6C-812E-4003-8295-8864AFDC74A7}.Release|x64.ActiveCfg = Release|Any CPU
+		{FE870D6C-812E-4003-8295-8864AFDC74A7}.Release|x64.Build.0 = Release|Any CPU
+		{FE870D6C-812E-4003-8295-8864AFDC74A7}.Release|x86.ActiveCfg = Release|Any CPU
+		{FE870D6C-812E-4003-8295-8864AFDC74A7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

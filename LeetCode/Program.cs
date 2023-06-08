@@ -23,7 +23,9 @@ namespace LeetCode
             Console.WriteLine("Hello World!");
             //Console.WriteLine(new LeetCode7().Reverse(12345));          // 整数反转
             //Console.WriteLine(new LeetCode13().RomanToInt("MCMXCIV"));  // 罗马数字转整数
-            Console.WriteLine(new LeetCode14().GetString(new string[] { "MCMXCIV" }));  // 最长公共前缀
+            //Console.WriteLine(new LeetCode14().GetString(new string[] { "MCMXCIV" }));  // 最长公共前缀
+            Console.WriteLine(new LeetCode9().IsPalindrome(11));  // 回文数
+
             Console.ReadKey();
 
             return;
