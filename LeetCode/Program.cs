@@ -25,7 +25,9 @@ namespace LeetCode
             //Console.WriteLine(new LeetCode13().RomanToInt("MCMXCIV"));  // 罗马数字转整数
             //Console.WriteLine(new LeetCode14().GetString(new string[] { "MCMXCIV" }));  // 最长公共前缀
             //Console.WriteLine(new LeetCode9().IsPalindrome(11));  // 回文数
-            Console.WriteLine(new LeetCode20().IsValid("(({[]}))"));  // 回文数
+            //Console.WriteLine(new LeetCode20().IsValid("(({[]}))"));  // 回文数
+            //Console.WriteLine(new LeetCode8().MyAtoi("42"));  // 字符串转数字
+            Console.WriteLine(new LeetCode26().RemoveDuplicates(new int[] { }));  // 删除有序数组中的重复项
 
             Console.ReadKey();
 
