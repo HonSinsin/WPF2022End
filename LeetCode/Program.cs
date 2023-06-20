@@ -29,7 +29,8 @@ namespace LeetCode
             //Console.WriteLine(new LeetCode8().MyAtoi("42"));  // 字符串转数字
             //Console.WriteLine(new LeetCode26().RemoveDuplicates(new int[] { }));  // 删除有序数组中的重复项
             //Console.WriteLine(new LeetCode27().RemoveElement(new int[] { }, 0));  // 移除元素
-            Console.WriteLine(new LeetCode58().LengthOfLastWord(""));  // 最后一个单词的长度
+            //Console.WriteLine(new LeetCode58().LengthOfLastWord(""));  // 最后一个单词的长度
+            Console.WriteLine(new LeetCode35().SearchInsert(new int[] { }, 5));  // 搜索插入位置
 
             Console.ReadKey();
 
